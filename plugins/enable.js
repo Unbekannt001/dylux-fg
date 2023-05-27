@@ -105,6 +105,15 @@ const listMessage = {
       }
       chat.antiLink = isEnable
       break
+		  case 'antipornlink'
+		  if (m.isGroup) {
+        if (!(isAdmin || isOwner)) {
+          global.dfail('admin', m, conn)
+          throw false
+        }
+      }
+      chat.antipornLink = isEnable
+      break
       
       case 'sololatinos':
       case 'sololatino':
